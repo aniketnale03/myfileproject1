@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+        }
+        
+        :root {
+            --red: #ff5a3c;
+            --light-red: #f9edeb;
+
+        }
+
+        .navbar {
+            display: inline;
+            background-color: aliceblue;
+            color: black;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 7rem;
+        }   
+
+    header {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        background: #fff;
+        padding: 1.5rem 9%;
+        box-shadow: 0 .5rem 1rem black;
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        }
+
+        header .navbar a {
+            color: #333;
+            font-size: 2rem;
+            padding: 0 1.5rem;
+            text-decoration: none;
+        }
+
+        header .navbar a:hover {
+            color: var(--red);
+        }
+
+        header .icons #menu-bars,
+        header .icons a {
+            height: 4.5rem;
+            width: 5rem;
+            line-height: 4.5rem;
+            font-size: 2rem;
+            margin-right: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--red);
+            background: var(--light-red);
+            text-align: center;
+        }
+        header .logo {
+            font-weight: bolder;
+            font-size: 2.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        header .logo span {
+            color: var(--red);
+        }
+        header .icons #menu-bars:hover,
+        header .icons a:hover {
+            background-color: var(--red);
+            color: #fff;
+        }
+
+        header .icons #menu-bars {
+            display: none;
+        }
+
+        body {
+            background: #f7f7f7;
+            width: 90%;
+        }
+        .home {
+                min-height :100vh;
+                background: url() no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .home form {
+                margin-top: 7rem;
+                background: #fff;
+                border-radius: 0.5rem;
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+                width: 70rem;
+                padding: 2rem;
+            }
+
+            .home form h3 {
+                text-align: center;
+                font-size: 3rem;
+                color: #333;
+            }
+
+            .home forms .button-container {
+                display: flex;
+                gap: 1.5rem;
+            }
+
+            .home forms .button-container {
+                flex: 1;
+            }    
+
+
+        @media(max-width:991px) {
+                html {
+                    font-size: 55%;
+                }
+
+                header {
+                    padding: 1.5rem 1.5rem;
+                }
+            }
+            @media(max-width:768px) {
+                header .icons #menu-bars {
+                    display: inline-block;
+                }
+
+                header .navbar {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 100%; background:#f7f7f7;
+                    border: .1rem solid #333;
+                    transition: .2s linear;
+                    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                }
+
+                header .navbar a {
+                    display: block;
+                    padding: 1.5rem;
+                    margin: 1.5rem;
+                    background: #fff;
+                    border: .1rem solid #3333;
+                    border-radius: .5rem;
+                }
+            }
+
+            @media(max-width:450px) {
+                html {
+                    font-size: 50%;
+                }
+
+                header {
+                    padding: 1.5rem 1.5rem;
+                }
+
+                #home {
+                    padding: 2rem 9%;
+                }
+            }
+    
+
+
+</style>
+<body>
+     <!--header starts-->
+     <header>
+        <a href="#" class="logo"><span>Real</span>Estate</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Service</a>
+            <a href="#">Features</a>
+            <a href="#">Agents</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <di id="menu-bars" class="fas fa-bars">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-user"></a>
+        </div>
+    </header>
+    <!--header ends-->
+
+    <!-- Section Starts-->
+     <section class="'home" id="home">
+        <form action="" method="get">
+            <h3>Find Your Perfect Home</h3>
+            <div class="button-containers">
+                <a href="#" class="btn">For Rent</a>
+                <a href="#" class="btn">For Sell</a>
+            </div>
+            <div class="input-box">
+                <input type="search" name="" id="" placeholder="Neighbourhood">
+                <input type="search" name="" id="" placeholder="city">
+
+                <select name="" id="">
+                    <option value="" disabled hidden selected>minimum price</option>
+                    <option value="5000">5000</option>
+                    <option value="10000">10000</option>
+                    <option value="15000">15000</option>
+                    <option value="20000">20000</option>
+                    <option value="25000">25000</option>
+                </select>
+
+                <select name="" id="">
+                    <option value="" disabled hidden selected>maximum price</option>
+                    <option value="30000">30000</option>
+                    <option value="40000">40000</option>
+                    <option value="45000">45000</option>
+                    <option value="50000">50000</option>
+                    <option value="55000">55000</option>
+                </select>
+
+                <select name="" id="">
+                    <option value="Property Status">Property Status</option>
+                    <option value="Ready to move">Ready to move</option>
+                    <option value="under construction">under construction</option>
+                    <option value="furnished">furnished</option>
+                    <option value="semi-furnished">semi-furnished</option>
+                    <option value="unfurnished">unfurnished</option>
+                </select>
+
+                <select name="" id="">
+                    <option value="30000" disabled hidden selected>Property type</option>
+                    <option value="Flat">Flat</option>
+                    <option value="house">house</option>
+                    <option value="shop">shop</option>
+                    <option value="warehouse">warehouse</option>
+                    <option value="land">land</option>
+                </select>
+
+                <select name="" id="">
+                    <option value="30000" disabled hidden selected>BHK</option>
+                    <option value="Flat">1BHK</option>
+                    <option value="house">2BHK</option>
+                    <option value="shop">3BHK</option>
+                    <option value="warehouse">4BHK</option>
+                    <option value="land">5BHK</option>
+                </select>
+
+                <select name="" id="">
+                    <option value="30000" disabled hidden selected>Aminities</option>
+                    <option value="Flat">parking space</option>
+                    <option value="house">swimming pool</option>
+                    <option value="shop">security</option>
+                    <option value="warehouse">all</option>
+                </select>
+
+                <select name="" id="">
+                    <option value="Bedrooms" disabled hidden selected>Bedrooms</option>
+                    <option value="Bedrooms">1Bedrooms</option>
+                    <option value="Bedrooms">2Bedrooms</option>
+                    <option value="Bedrooms">3Bedrooms</option>
+                    <option value="Bedrooms">4Bedrooms</option>
+                    <option value="Bedrooms">5Bedrooms</option>
+                </select>
+<h3>add git repository</h3>
+                <select name="" id="">
+                    <option value="Bathrooms" disabled hidden selected>Bathrooms</option>
+                    <option value="Bathrooms">1Bathrooms</option>
+                    <option value="Bathrooms">2Bathooms</option>
+                    <option value="Bathrooms">3Bathooms</option>
+                    <option value="Bathooms">4Bathooms</option>
+                    <option value="Bathrooms">5Bathooms</option>
+                </select>
+                <input type="submit" value="search-property" class="btn">
+            </div>
+        </form>
+     </section>
+    <!--section ends-->
+    <script>
+        let menu = document.queryselector('#menu-bars');
+        let navbar = document.queryselector('.navbar');
+        menu.onclick() = () => {
+            navbar.classList.toggle('active');
+            menu.classlist.toggle('fa-times');
+        }
+        window.onscroll() = () => {
+            navbar.classList.remove('active');
+            menu.classlist.remove('fa-times');
+        }
+
+    </script>
+
+</body>
+</html>
